@@ -1,7 +1,3 @@
-// ================================
-// COMPONENTE: Banner (Hero)
-// Props: mudarPagina
-// ================================
 function Banner(props) {
   return (
     <div style={estilosBanner.banner}>
@@ -21,7 +17,6 @@ function Banner(props) {
           com carinho para cada xícara que servimos.
         </p>
 
-        {/* Botões com onClick — evento da apostila */}
         <div style={{ display: "flex", gap: "16px", justifyContent: "center", flexWrap: "wrap" }}>
           <button
             onClick={() => props.mudarPagina("produtos")}
