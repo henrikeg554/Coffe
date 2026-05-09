@@ -1,20 +1,13 @@
-// ================================
-// IMPORTAÇÕES
-// ================================
 import { useState } from "react";
 import CardProduto from "./CardProduto";
 
-// ================================
-// DADOS — array de produtos
-// igual ao meusItens da apostila
-// ================================
 const produtos = [
   {
     id: 1,
     nome: "Espresso",
     preco: "R$ 8,00",
     descricao: "Encorpado e intenso, 30ml puro.",
-    foto: "https://www.thespruceeats.com/thmb/TBMkEMkbq1RCeSWoq2XstMSw7Qg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/what-is-espresso-765702-hero-01-379503a96b6f4fcabda777e2d20e3a73.jpg",
+    foto: "https://images.tcdn.com.br/img/img_prod/1015945/cafe_em_graos_para_espresso_gourmet_especial_cerrado_mineiro_3_unidades_combo_promocional_119_2_2330e60baf6be7a9ee4d7b68768aa37e.jpg",
   },
   {
     id: 2,
