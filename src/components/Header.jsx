@@ -1,13 +1,8 @@
-// ================================
-// COMPONENTE: Header (Navbar)
-// Props: paginaAtiva, mudarPagina
-// ================================
 function Header(props) {
   const links = ["inicio", "produtos", "sobre", "contato"];
 
   return (
     <header style={estilosHeader.header}>
-      {/* Logo */}
       <div
         onClick={() => props.mudarPagina("inicio")}
         style={estilosHeader.logo}
@@ -15,7 +10,6 @@ function Header(props) {
         ☕ Grão Negro
       </div>
 
-      {/* Links — .map() igual à apostila */}
       <nav style={estilosHeader.nav}>
         {links.map((link) => (
           <button
