@@ -1,15 +1,6 @@
-// ================================
-// IMPORTAÇÃO
-// ================================
 import { useState } from "react";
 
-// ================================
-// COMPONENTE: CardProduto
-// Props: nome, preco, descricao, foto
-// — igual ao Produto.js da apostila
-// ================================
 function CardProduto(props) {
-  // useState para hover — apostila pág. 31
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -23,7 +14,6 @@ function CardProduto(props) {
         transition: "all 0.3s ease",
       }}
     >
-      {/* img com src de props — igual ao Produto.js da apostila */}
       <img
         src={props.foto}
         alt={props.nome}
