@@ -1,14 +1,7 @@
-// ================================
-// IMPORTAÇÕES
-// ================================
 import { useState } from "react";
 
-// ================================
-// COMPONENTE: Footer
-// Inclui formulário de contato
-// ================================
 function Footer() {
-  // useState para o form — apostila pág. 31
+
   const [form, setForm]       = useState({ nome: "", email: "", mensagem: "" });
   const [enviado, setEnviado] = useState(false);
 
@@ -16,7 +9,6 @@ function Footer() {
     setForm({ ...form, [campo]: valor });
   }
 
-  // evento com preventDefault — apostila pág. 30
   function handleEnviar(e) {
     e.preventDefault();
     if (!form.nome || !form.email || !form.mensagem) {
@@ -29,21 +21,19 @@ function Footer() {
   return (
     <footer style={estilosFooter.footer}>
 
-      {/* Seção de contato */}
       <div style={estilosFooter.contatoSecao}>
         <h2 style={estilosFooter.titulo}>Fale Conosco</h2>
         <p style={estilosFooter.subtitulo}>
           📍 Rua Augusta, 1204 — Consolação · Seg–Sáb das 7h às 20h
         </p>
 
-        {/* Condicional ternária ? : — apostila pág. 42 */}
         {enviado ? (
           <div style={estilosFooter.sucesso}>
             <div style={{ fontSize: "48px", marginBottom: "16px" }}>✅</div>
             <h3 style={{ color: "#C8952A", fontSize: "1.5rem", marginBottom: "8px" }}>
               Mensagem enviada!
             </h3>
-            {/* interpolação de variável — apostila pág. 7 */}
+
             <p style={{ color: "rgba(245,237,214,0.6)" }}>
               Em breve entraremos em contato, {form.nome}!
             </p>
@@ -95,11 +85,10 @@ function Footer() {
         )}
       </div>
 
-      {/* Rodapé inferior */}
       <div style={estilosFooter.rodape}>
         <p>☕ Grão Negro — São Paulo, Brasil</p>
         <p style={{ color: "rgba(245,237,214,0.3)", fontSize: "13px", marginTop: "6px" }}>
-          © 2025 · Feito com paixão e muito café
+          © 2025 · Feito por Guilherme Henrike com café forte e mente focada.
         </p>
       </div>
 
