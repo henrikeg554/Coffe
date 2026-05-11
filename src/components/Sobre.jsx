@@ -1,8 +1,5 @@
-// ================================
-// COMPONENTE: Sobre
-// ================================
 function Sobre() {
-  // dados dos stats — array para usar .map()
+
   const stats = [
     { numero: "6+",   label: "Anos de experiência" },
     { numero: "12",   label: "Origens de grão" },
@@ -10,7 +7,6 @@ function Sobre() {
     { numero: "500+", label: "Clientes por semana" },
   ];
 
-  // dados dos depoimentos
   const depoimentos = [
     { id: 1, nome: "Ana Lima",    texto: "Melhor café que já tomei em SP. O V60 é incrível!", estrelas: 5 },
     { id: 2, nome: "Carlos Melo", texto: "Ambiente aconchegante e baristas super atenciosos.",  estrelas: 5 },
@@ -21,11 +17,9 @@ function Sobre() {
     <div style={estilosSobre.secao}>
       <h2 style={estilosSobre.titulo}>Nossa História</h2>
 
-      {/* Layout de duas colunas */}
       <div style={estilosSobre.grid}>
-        {/* Foto real da cafeteria */}
         <img
-          src="https://media-cdn.tripadvisor.com/media/photo-s/1a/b3/23/84/the-little-coffee-shop.jpg"
+          src="https://servircomrequinte.francobachot.com.br/wp-content/uploads/2025/02/CAFETERIAS-FB.jpg"
           alt="Interior da cafeteria Grão Negro"
           style={estilosSobre.foto}
         />
@@ -33,7 +27,7 @@ function Sobre() {
         <div>
           <h3 style={estilosSobre.tituloSecundario}>Como tudo começou</h3>
           <p style={estilosSobre.paragrafo}>
-            A Grão Negro nasceu em 2018 da paixão de dois baristas por café de
+            A Doce Expresso nasceu em 2026 da paixão de dois baristas por café de
             qualidade. Queríamos trazer para São Paulo uma experiência que respeita
             cada etapa, do grão até a sua xícara.
           </p>
@@ -44,7 +38,6 @@ function Sobre() {
         </div>
       </div>
 
-      {/* Stats — .map() igual à apostila */}
       <div style={estilosSobre.statsGrid}>
         {stats.map((stat, index) => (
           <div key={index} style={estilosSobre.statCard}>
@@ -54,14 +47,12 @@ function Sobre() {
         ))}
       </div>
 
-      {/* Depoimentos */}
       <h3 style={{ ...estilosSobre.titulo, fontSize: "1.8rem", marginTop: "56px" }}>
         O que dizem nossos clientes
       </h3>
       <div style={estilosSobre.grade}>
         {depoimentos.map((dep) => (
           <div key={dep.id} style={estilosSobre.cardDepoimento}>
-            {/* Array(n).fill() — apostila pág. 46 */}
             <div style={{ marginBottom: "12px" }}>
               {Array(dep.estrelas).fill("★").map((estrela, i) => (
                 <span key={i} style={{ color: "#C8952A", fontSize: "18px" }}>
