@@ -24,7 +24,7 @@ function Footer() {
       <div style={estilosFooter.contatoSecao}>
         <h2 style={estilosFooter.titulo}>Fale Conosco</h2>
         <p style={estilosFooter.subtitulo}>
-          📍 Rua Augusta, 1204 — Consolação · Seg–Sáb das 7h às 20h
+          📍 Avenida Aurora Cristal, 1508 — Consolação · Seg–Sáb das 7h às 20h
         </p>
 
         {enviado ? (
@@ -86,9 +86,9 @@ function Footer() {
       </div>
 
       <div style={estilosFooter.rodape}>
-        <p>☕ Grão Negro — São Paulo, Brasil</p>
+        <p>☕ Doce Expresso — São Paulo, Brasil</p>
         <p style={{ color: "rgba(245,237,214,0.3)", fontSize: "13px", marginTop: "6px" }}>
-          © 2025 · Feito por Guilherme Henrike com café forte e mente focada.
+          © 2026 · Feito por Guilherme Henrike com café forte e mente focada.
         </p>
       </div>
 
