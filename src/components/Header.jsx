@@ -7,7 +7,7 @@ function Header(props) {
         onClick={() => props.mudarPagina("inicio")}
         style={estilosHeader.logo}
       >
-        ☕ Grão Negro
+        ☕ Doce Expresso
       </div>
 
       <nav style={estilosHeader.nav}>
