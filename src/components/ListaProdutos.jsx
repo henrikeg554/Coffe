@@ -21,39 +21,35 @@ const produtos = [
     nome: "Cold Brew",
     preco: "R$ 16,00",
     descricao: "Infusão fria de 24 horas, suave e gelado.",
-    foto: "https://newkingscoffee.com/cdn/shop/articles/Cold_Brew_Iced_Coffee_Blog_Post_Image.jpg?v=1679411501",
+    foto: "https://lifesimplified.gorenje.com/wp-content/uploads/2024/06/gorenje-blog-refreshing_cold_brew_coffee.jpg",
   },
   {
     id: 4,
     nome: "Latte",
     preco: "R$ 14,00",
     descricao: "Espresso suave com muito leite cremoso.",
-    foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Latte_at_Doppio_Espresso_Bar%2C_Oxford.jpg/1280px-Latte_at_Doppio_Espresso_Bar%2C_Oxford.jpg",
+    foto: "https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480_1_5x/img/recipe/ras/Assets/314D11A6-4457-4C70-A1BE-A6C25F597C18/Derivates/B362DC69-6AAA-43E1-AF51-184463E8551B.jpg",
   },
   {
     id: 5,
     nome: "Filtrado V60",
     preco: "R$ 18,00",
     descricao: "Método manual, grão de origem única.",
-    foto: "https://perfectdailygrind.com/wp-content/uploads/2020/07/coffee-roastery-design.jpg",
+    foto: "https://revistaespresso.com.br/wordpress/wp-content/uploads/2023/01/vc-barista-75-1024x547.png",
   },
   {
     id: 6,
     nome: "Americano",
     preco: "R$ 10,00",
     descricao: "Espresso alongado com água quente.",
-    foto: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Flat_white_coffee_with_pretty_feather_pattern.jpg/1200px-Flat_white_coffee_with_pretty_feather_pattern.jpg",
+    foto: "https://guadarrama.coffee/cdn/shop/articles/cafe-americano-en-la-taza.jpg?v=1726039331&width=1100",
   },
 ];
 
-// ================================
-// COMPONENTE: ListaProdutos
-// ================================
+
 function ListaProdutos() {
-  // useState para busca — apostila pág. 31
   const [busca, setBusca] = useState("");
 
-  // .filter() para filtrar os produtos pela busca
   const produtosFiltrados = produtos.filter((p) =>
     p.nome.toLowerCase().includes(busca.toLowerCase())
   );
@@ -63,7 +59,6 @@ function ListaProdutos() {
       <h2 style={estilosLista.titulo}>Nosso Cardápio</h2>
       <p style={estilosLista.subtitulo}>Cada xícara, uma experiência única</p>
 
-      {/* Input com onChange — apostila Form.js */}
       <input
         type="text"
         placeholder="🔍 Buscar bebida..."
@@ -72,7 +67,6 @@ function ListaProdutos() {
         style={estilosLista.inputBusca}
       />
 
-      {/* Grade de cards — .map() igual à apostila pág. 46 */}
       <div style={estilosLista.grade}>
         {produtosFiltrados.map((produto) => (
           <CardProduto
@@ -85,7 +79,6 @@ function ListaProdutos() {
         ))}
       </div>
 
-      {/* Condicional && — apostila pág. 40 */}
       {produtosFiltrados.length === 0 && (
         <p style={estilosLista.semResultado}>
           Nenhuma bebida encontrada para "{busca}" 😕
